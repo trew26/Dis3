@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="de.dis2011.data.Apartment" table="APARTMENT">
+        <id name="fk_estate_id" column="FK_ESTATE_ID">
+            <!--
+            <generator class="foreign">
+                <param name="property">estate</param>
+            </generator>
+            -->
+            <generator class="assigned"/>
+        </id>
+        <property name="floor" type="integer" column="FLOOR"/>
+        <property name="rent" type="integer" column="RENT"/>
+        <property name="rooms" type="double" column="ROOMS"/>
+        <property name="kitchen" type="integer" column="KITCHEN"/>
+        <property name="balcony" type="integer" column="BALCONY"/>
+
+    </class>
+</hibernate-mapping>

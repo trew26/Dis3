@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="de.dis2011.data.House" table="HOUSE">
+        <id name="fk_estate_id" column="FK_ESTATE_ID">
+            <generator class="assigned"/>
+        </id>
+        <property name="floors" type="integer" column="FLOORS"/>
+        <property name="price" type="integer" column="PRICE"/>
+        <property name="garden" type="integer" column="GARDEN"/>
+    </class>
+</hibernate-mapping>

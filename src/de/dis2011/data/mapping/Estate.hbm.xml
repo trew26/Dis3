@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="de.dis2011.data.Estate" table="ESTATE">
+        <id name="id" column="ID">
+            <generator class="native"/>
+        </id>
+        <property name="city" type="string" column="CITY"/>
+        <property name="zip" type="integer" column="ZIP"/>
+        <property name="street" type="string" column="STREET"/>
+        <property name="number" type="integer" column="NUMBER"/>
+        <property name="area" type="string" column="AREA"/>
+
+        <many-to-one name="fk_agent" class="de.dis2011.data.Makler" column="FK_AGENT_LOGIN" not-null="true"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="de.dis2011.data.Makler" table="MAKLER">
+        <id name="id" column="ID">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string" column="NAME"/>
+        <property name="address" type="string" column="ADDRESS"/>
+        <property name="login" type="string" column="LOGIN"/>
+        <property name="password" type="string" column="PASSWORD"/>
+
+    </class>
+</hibernate-mapping>

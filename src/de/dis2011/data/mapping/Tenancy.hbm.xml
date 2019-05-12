@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="de.dis2011.data.Tenancy" table="TENANCIES">
+        <id name="id" column="FK_CONTRACT_NUMBER">
+            <generator class="native"/>
+        </id>
+        <property name="startdate" type="string" column="START_DATE"/>
+        <property name="duration" type="integer" column="DURATION"/>
+        <property name="additional_cost" type="integer" column="ADDITIONAL_COSTS"/>
+        <property name="appartmentId" type="integer" column="FK_APARTMENT_ID"/>
+    </class>
+</hibernate-mapping>

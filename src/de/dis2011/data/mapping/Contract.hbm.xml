@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="de.dis2011.data.Contract" table="CONTRACT">
+        <id name="id" column="NUMBER">
+        </id>
+        <property name="contractdate" type="string" column="DATE"/>
+        <property name="place" type="string" column="PLACE"/>
+        <property name="personid" type="integer" column="FK_PERSON_ID"/>
+    </class>
+</hibernate-mapping>
